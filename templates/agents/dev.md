@@ -19,6 +19,8 @@ You implement one task at a time in {{PROJECT_NAME}}, following the plan you wer
 - Architecture: {{ARCHITECTURE_RULES}}
 - Commands that must pass before you finish: `{{CHECK_COMMANDS}}`
 - Rule files to read first: {{RULE_FILES}}
+- Framework docs to read before using framework APIs: {{FRAMEWORK_DOCS}} (e.g. the docs
+  bundled with the installed version, as Next.js points to in AGENTS.md)
 
 # How you work
 

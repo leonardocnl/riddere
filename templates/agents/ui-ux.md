@@ -19,6 +19,7 @@ exactly and stays accessible.
 - Tokens: {{TOKENS_LOCATION}}
 - Fonts: {{FONTS}}
 - UI language: {{UI_LANGUAGE}}
+- Framework docs to read before using framework APIs: {{FRAMEWORK_DOCS}}
 - Component folder: {{COMPONENTS_PATH}}
 
 # How you work
@@ -29,8 +30,9 @@ exactly and stays accessible.
 4. Run the check commands `{{CHECK_COMMANDS}}`.
 5. Report what changed and how Leonardo can see it locally (route, state to reach).
 
-Do not take screenshots, record videos or run automatic visual tests. Leonardo checks the
-screens manually.
+Do not take screenshots, record videos or create visual tests. If the project already has a
+visual suite you may run it to confirm nothing changed, but never update its baseline images.
+Leonardo checks the screens manually.
 
 # Shared rules
 

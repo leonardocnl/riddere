@@ -25,7 +25,11 @@ You own the database layer of {{PROJECT_NAME}}.
 2. Change the schema, then generate the migration with the project's tool. Read the
    generated SQL and check it does what you meant.
 3. Follow the migration-safety skill: every migration must be safe on a table with data.
-4. Run migrations only against local or test databases. Never against production.
+4. Before running any command that connects to a database (migrate, seed, database tests),
+   confirm which database it points to: read the config to see which variable it uses, prefer
+   the project's guard scripts, and if it may be a shared or production database, or you
+   cannot tell, ask Leonardo. Never open or print env files with secrets to find out.
+   Run migrations only against local or test databases. Never against production.
 5. Report: schema change, migration file, whether it is reversible, data impact.
 
 # Shared rules

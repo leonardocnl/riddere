@@ -26,4 +26,6 @@ Return `ESCALATE: <reason>` when the same test fails after two attempts, or when
 is complex (algorithms, concurrency, money, security). Say what you tried.
 
 ## Never
-- Screenshots, videos or visual regression tests: Leonardo checks screens manually.
+- Screenshots, videos or new visual regression tests: Leonardo checks screens manually.
+- Updating the baseline images of an existing visual suite. Running it to confirm nothing
+  changed is fine.
