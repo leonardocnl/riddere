@@ -52,11 +52,16 @@ When the main conversation sees `ESCALATE`, it calls `testes` again with the mod
   `Co-Authored-By` or `Generated with Claude Code` lines, in commits or PR descriptions.
 - Follow the project's branch workflow. Never push to protected branches (`main`, `develop`
   when it exists) directly.
+- Never skip git hooks: no `--no-verify`, no `core.hooksPath` overrides, no `HUSKY=0` or
+  similar. If a hook fails, fix the cause.
 
 ## 7. Testing
 
-- Automated tests only. Do not ask for screenshots, videos or automatic visual tests;
-  Leonardo checks screens manually by running the app locally.
+- Automated tests only. Do not ask for screenshots or videos; Leonardo checks screens
+  manually by running the app locally.
+- Do not create a visual regression suite. If the project already has one, agents may run it
+  to confirm nothing changed, but never update its baseline images: a changed baseline is a
+  visual decision for Leonardo.
 
 ## 8. Language
 

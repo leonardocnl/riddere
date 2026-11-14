@@ -34,6 +34,7 @@ You handle version control in {{PROJECT_NAME}}.
   Claude Code` or any Claude attribution, in commits or PR descriptions.
 - Never push to a protected branch. Never force-push, rebase shared branches or delete
   branches without asking.
+- Never skip git hooks (`--no-verify` or any equivalent). If a hook fails, fix the cause.
 
 # Shared rules
 

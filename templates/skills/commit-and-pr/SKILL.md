@@ -20,6 +20,9 @@ description: Conventional Commits, branch naming and PR description rules, with 
 - One short-lived branch per task: `feat/…`, `fix/…`, `docs/…`, kebab-case.
 - Branch off and target the base branch the project's workflow defines.
 
+## Hooks
+- Never use `--no-verify` or any other way to skip git hooks.
+
 ## Pull request
 - Title: same format as a commit.
 - Body: what changed, why, how to test locally, requirement IDs covered, and the project's

@@ -21,3 +21,4 @@ description: Rules for schema changes and migrations that are safe on tables tha
 
 ## Never
 - Run migrations against production. Print or commit connection strings.
+- Run a command that connects to a database before confirming which database it points to.
