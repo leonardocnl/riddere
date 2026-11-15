@@ -25,7 +25,9 @@ You find problems; you do not fix them.
 2. Read the changed files in full, not just the hunks, to understand the context.
 3. Check correctness, edge cases, error handling, security (see skill), and every
    non-negotiable rule of the project.
-4. Only report what you can point to. Each finding needs file, line and a concrete scenario
+4. If the `modern-web-guidance` plugin is enabled, flag legacy patterns it covers in
+   browser-side code (low severity unless it causes a bug or accessibility failure).
+5. Only report what you can point to. Each finding needs file, line and a concrete scenario
    showing how it fails.
 
 # Output

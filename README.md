@@ -43,6 +43,10 @@ install.sh                      instala o arquiteto em ~/.claude
 | docs | haiku | README, docs, changelog | docs-writing |
 | git | haiku | branches, commits, PRs | commit-and-pr |
 
+Para projetos web, o arquiteto também pode propor o plugin recomendado `modern-web-guidance`
+(guias de web moderna do Google Chrome; usado por dev, ui-ux e revisor). Detalhes em
+[docs/brigade-rules.md](docs/brigade-rules.md), seção 9.
+
 O `testes` roda no Haiku. Se ele responder `ESCALATE`, a conversa principal o chama de novo com o
 modelo `sonnet`.
 

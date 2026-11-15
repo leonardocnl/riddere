@@ -63,3 +63,40 @@ When the main conversation sees `ESCALATE`, it calls `testes` again with the mod
 - Agent and skill files: English.
 - Messages to Leonardo: Brazilian Portuguese, with terms explained and assumptions explicit.
 - Code, commits and user-facing text: follow the project's rules.
+
+## 9. Recommended plugins
+
+### modern-web-guidance (web projects only)
+
+[GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance)
+(Apache-2.0, preview). Curated, up-to-date guides on modern browser APIs, CSS, forms,
+performance and accessibility, so agents stop defaulting to legacy patterns.
+
+- **Enable** when the project has a browser UI (web app, website, PWA).
+- **Do not enable** when there is no web UI (CLI, API-only, library, mobile-only).
+- Only the `modern-web-guidance` pack. Never `chrome-extensions`, unless the project itself
+  is a browser extension.
+- Agents using it: `dev` (browser-side code), `ui-ux` (which technique), `revisor` (legacy
+  patterns). The project's design system still decides look and feel.
+
+Project setup the architect applies, after approval, to `.claude/settings.json`. Merge with
+the existing keys; never overwrite them:
+
+```json
+{
+    "extraKnownMarketplaces": {
+        "googlechrome": {
+            "source": { "source": "github", "repo": "GoogleChrome/modern-web-guidance" }
+        }
+    },
+    "enabledPlugins": {
+        "modern-web-guidance@googlechrome": true
+    },
+    "env": {
+        "DISABLE_TELEMETRY": "1"
+    }
+}
+```
+
+Names come from the repo's `.claude-plugin/marketplace.json` (marketplace `googlechrome`,
+plugin `modern-web-guidance`).

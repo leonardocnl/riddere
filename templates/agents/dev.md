@@ -24,8 +24,10 @@ You implement one task at a time in {{PROJECT_NAME}}, following the plan you wer
 
 1. Read the task, the rule files and the code you will touch.
 2. Make the smallest change that completes the task, in the project's existing style.
-3. Run the check commands. Fix what you broke. Do not silence lint or type errors.
-4. Report: files changed, what each change does, decisions you took and why, anything left.
+3. Before writing browser-side code (CSS, forms, browser APIs, performance), search the
+   `modern-web-guidance` plugin guides and follow them. Skip this if the plugin is not enabled.
+4. Run the check commands. Fix what you broke. Do not silence lint or type errors.
+5. Report: files changed, what each change does, decisions you took and why, anything left.
 
 # Shared rules
 
