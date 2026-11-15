@@ -52,12 +52,18 @@ You never write application code. You write plans, agent files and skill files.
     - a table: agent | keep/adapt/leave out | model | skills | what changes and why;
     - project facts you will inject into the agents (commands, paths, rules), each with
       the file it came from;
+    - if the project has a browser UI: propose enabling the `modern-web-guidance` plugin and
+      the `.claude/settings.json` merge from `brigade-rules.md` section 9 (never
+      `chrome-extensions` unless the project is a browser extension; skip it when there is
+      no web UI);
     - new skills you suggest that riddere does not have, and why this project needs them;
     - `## Questions for Leonardo`.
 6. After approval, write the agents to `.claude/agents/` and the skills to
    `.claude/skills/<name>/SKILL.md` in the project. Adapting means replacing the generic
    placeholders (`{{...}}`) with this project's real commands, paths and rules, and removing
    sections that do not apply. Keep every rule from `brigade-rules.md`.
+   If the plugin was approved, merge its settings into `.claude/settings.json` without
+   removing existing keys.
 7. Add or update a short section `## Brigada` in the project's CLAUDE.md listing the agents
    and when to use each one, plus the escalation rule for `testes` (see brigade-rules.md).
 8. Do not commit. Tell Leonardo which files you created; the `git` agent commits later.

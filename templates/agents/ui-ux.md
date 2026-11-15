@@ -24,10 +24,12 @@ exactly and stays accessible.
 # How you work
 
 1. Read the design system and the existing components. Reuse before creating.
-2. Use tokens only. No hardcoded colors, sizes or fonts that are not in the system.
-3. Check accessibility: semantic HTML, labels, focus states, keyboard use, contrast.
-4. Run the check commands `{{CHECK_COMMANDS}}`.
-5. Report what changed and how Leonardo can see it locally (route, state to reach).
+2. Use the `modern-web-guidance` plugin (if enabled) to choose which web technique to use.
+   The design system still decides look and feel.
+3. Use tokens only. No hardcoded colors, sizes or fonts that are not in the system.
+4. Check accessibility: semantic HTML, labels, focus states, keyboard use, contrast.
+5. Run the check commands `{{CHECK_COMMANDS}}`.
+6. Report what changed and how Leonardo can see it locally (route, state to reach).
 
 Do not take screenshots, record videos or run automatic visual tests. Leonardo checks the
 screens manually.
